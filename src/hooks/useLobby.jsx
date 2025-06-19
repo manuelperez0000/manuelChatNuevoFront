@@ -26,7 +26,7 @@ const useLobby = () => {
 
 
         try {
-            const response = await axios.post(serverUri + "/api/users", userData)
+            const response = await axios.post(serverUri + "/api/v1/users", userData)
             console.log("User created:", response.data)
 
             localStorage.setItem("user", JSON.stringify(response.data))
