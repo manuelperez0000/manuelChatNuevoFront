@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { io } from "socket.io-client";
 import { serverUri } from "../serverUri";
-const socket = io(serverUri); // Usa tu dominio backend en producción
+const socket = io(serverUri);
 
 const useChat = () => {
   const [users, setUsers] = useState([]);
@@ -76,7 +76,9 @@ const useChat = () => {
     const data = {
       fromId: myUser?._id,
       toId: selectedContact?._id,
-      message: newMessage
+      message: newMessage,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
     };
 
     if (!data.fromId || !data.toId || !data.message.trim()) {

@@ -35,8 +35,8 @@ const useLobby = () => {
             navigate("/chat")
 
         } catch (error) {
-            alert("Error al intentar crear el usuario. Por favor, inténtalo de nuevo.")
             console.error("Error creating user:", error)
+            alert("Error al intentar crear el usuario. Por favor, inténtalo de nuevo.")
         } finally {
             setLoading(false)
         }

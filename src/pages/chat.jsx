@@ -3,7 +3,6 @@
 import avatarImages from "../avatars/importers"
 import useChat from "../hooks/useChat"
 
-
 function Chat() {
 
   const { handleKeyPress, users,
@@ -160,7 +159,7 @@ function Chat() {
                       className={`d-flex align-items-center justify-content-end gap-1 ${myUser._id === message.fromId ? "text-white-50" : "text-muted"
                         }`}
                     >
-                      <small style={{ fontSize: "0.7rem" }}>{formatearFecha(message.createdAt)}</small>
+                      <small style={{ fontSize: "0.7rem" }}>{formatearFecha(message?.createdAt)}</small>
 
                     </div>
                   </div>
@@ -184,7 +183,6 @@ function Chat() {
                   placeholder="Escribe un mensaje"
                 />
               </div>
-
 
               <button onClick={handleSendMessage} className="btn btn-success btn-sm">
                 <i className="bi bi-send"></i>
