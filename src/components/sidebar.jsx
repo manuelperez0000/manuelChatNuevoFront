@@ -41,7 +41,7 @@ const Sidebar = ({ myUser, users, selectedContact, setSelectedContact }) => {
                                         className="rounded-circle bg-secondary d-flex align-items-center justify-content-center fw-bold"
                                         style={{ width: "50px", height: "50px" }}
                                     >
-                                        <img src={avatarImages[contact.avatar - 1].img} className="avatarImg" alt="" />
+                                        <img src={avatarImages[contact?.avatar - 1]?.img || ''} className="avatarImg" alt="" />
                                     </div>
 
                                     {/* {contact.online && (
